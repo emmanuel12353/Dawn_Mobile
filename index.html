@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+  <meta name="format-detection" content="telephone=yes">
+  <!-- <meta name="msapplication-tap-highlight" content="no"> -->
+  <meta name="viewport" content="initial-scale=1, height=device-height, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Dawn Mobile</title>
+
+  <link rel="stylesheet" href="css/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/fontawesome-free-6.1.1-web/css/all.min.css" />
+  <script type="text/javascript" src="css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/preloader.css" />
+  <link rel="stylesheet" type="text/css" href="css/dawn.css" />
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="pages loader">
+    <div id="loader-in"></div>
+  </div>
+
+  <div class="startPage pages common">
+    <div style="
+          height: 65vh;
+          background-image: url(img/assets/startBg.png);
+          background-size: cover;
+        ">
+      <div class="welcome1">
+        <div class="welcomeText">
+          <h5>Nourishing Disciples</h5>
+          <h2>Welcome to Dawn Mobile</h2>
+        </div>
+        <div class="getStartedBtn">
+          <h5>
+            GET STARTED <i class="fa-solid fa-angle-right"></i>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Continue Page -->
+  <div class="continuePage pages">
+    <div class="continueImg"></div>
+    <div class="continueText">
+      <h3>Welcome</h3>
+      <p></p>
+      <p>The best way to ensure personal spiritual growth and development</p>
+    </div>
+    <div class="row continueToDashBoard">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h3>Continue</h3>
+      </div>
+      <div class="col-2">
+        <h3><i class="fa-solid fa-angle-right"></i></h3>
+      </div>
+    </div>
+  </div>
+  <!-- signUpInPage -->
+  <div class="signUpInPage pages">
+    <div class="signUpInPageBG"></div>
+    <div class="formPanel">
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="signin-tab" data-bs-toggle="pill" data-bs-target="#signin" type="button"
+            role="tab" aria-controls="signin" aria-selected="true">Sign In</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="signup-tab" data-bs-toggle="pill" data-bs-target="#signup" type="button"
+            role="tab" aria-controls="signup" aria-selected="false">Sign Up</button>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div id="signup" class="tab-pane fade" role="tabpanel">
+          <div class="signUpForm">
+            <form action="" class="form">
+              <p class="regErr" style="text-align: center; color: red;"></p>
+              <input type="text" class="full_nameReg" name="full_name" placeholder="Name" />
+              <input type="email" class="emailReg" name="email" placeholder="Email" />
+              <input type="password" class="passwordReg" name="password" placeholder="Password" />
+              <select name="user_type" id="user_type">
+                <option value="">Select Role</option>
+                <option value="soul winner">Evangelist</option>
+                <option value="convert">Convert</option>
+              </select>
+              <input type="text" placeholder="Evangelist's ID (optional)" class="soulWinnerId"
+                style="display: none; text-align: center;" />
+            </form>
+          </div>
+          <input class="styledBtn signUpBtn" type="button" value="Continue" />
+        </div>
+
+        <div id="signin" class="tab-pane fade show active" role="tabpanel">
+          <div class="loginForm">
+            <form action="" class="form">
+              <p class="loginErr text-danger"></p>
+              <input type="email" name="email" class="signInName" placeholder="Email" />
+              <input type="password" name="password" class="signInPassword" placeholder="Password" />
+            </form>
+          </div>
+          <input class="styledBtn signInBtn" type="button" value="Continue" />
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Converts View -->
+  <div class="ConvertsView">
+    <div class="cvDashboard pages">
+      <div class="quickOptions">
+        <div class="dropDown row">
+          <div id="statusBar"></div>
+          <div class="col-4 profileBtn" style="padding: 7px; text-align: center">
+            <span class="fa fa-user dashMenus"></span>
+            <p class="collasP" style="font-weight: bold">PROFILE</p>
+          </div>
+          <div class="col-4 cvNavGrowthAnaly" style="padding: 7px; text-align: center">
+            <span class="fa fa-square-poll-vertical dashMenus"></span>
+            <p class="collasP">GROWTH ANALYSIS</p>
+          </div>
+          <div class="col-4 navConvertsDev" style="padding: 7px; text-align: center">
+            <span class="fa fa-level-up dashMenus"></span>
+            <p class="collasP">CONVERT'S DEVELOPMENT</p>
+          </div>
+          <div class="drops row collapse">
+            <div class="col-4 chatsBtn" style="padding: 7px; text-align: center">
+              <span class="fa fa-comments dashMenus"></span>
+              <p class="collasP">CHATS</p>
+            </div>
+            <div class="col-4 taskAndActivities" style="padding: 7px; text-align: center">
+              <span class="fa fa-tasks dashMenus"></span>
+              <p class="collasP">TASKS AND ACTIVITIES</p>
+            </div>
+            <div class="col-4 navResources" style="padding: 7px; text-align: center">
+              <span class="fa fa-book dashMenus"></span>
+              <p class="collasP">RESOURCES</p>
+            </div>
+            <div class="col-4 navPlaceOW" style="padding: 7px; text-align: center">
+              <span class="fa fa-map-marker dashMenus"></span>
+              <p class="collasP">PLACE OF WORSHIP</p>
+            </div>
+            <div class="col-4 notification" style="padding: 7px; text-align: center">
+              <span class="fa fa-bell dashMenus"></span>
+              <p class="collasP">NOTIFICATIONS</p>
+            </div>
+            <div class="col-4 navCouncel" style="padding: 7px; text-align: center">
+              <span class="fa fa-tags dashMenus"></span>
+              <p class="collasP">COUNSELLING</p>
+            </div>
+          </div>
+          <div class="col-12" style="text-align: center; padding: 1vh;">
+            <a href=".drops" data-bs-toggle="collapse" class="collapseBtn"><span class="fa fa-angle-down"></span></a>
+          </div>
+        </div>
+        <div class="dashImg">
+          <div class="welcome">
+            <p>Welcome</p>
+            <h1 class="profilePageName"></h1>
+          </div>
+        </div>
+        <div class="optionsCard">
+          <div class="cardOption convertStudyTab row" style="background-color: #8a56ac">
+            <p class="text-right"> <i class="fa-solid fa-angle-right"></i> </p>
+            <h3>Convert's Study Series</h3>
+          </div>
+          <div class="cardOption discipleProgTab" style="background-color: #d47fa6">
+            <p class="text-right"> <i class="fa-solid fa-angle-right"></i> </p>
+            <h3>Discipleship Program</h3>
+          </div>
+          <div class="cardOption soulWinnerTab">
+            <p class="text-right"> <i class="fa-solid fa-angle-right"></i> </p>
+            <h3>Soulwinner's Digest</h3>
+          </div>
+        </div>
+      </div>
+      <div class="dashBoardWhite">
+        <div class="pageArea">
+          <div class="bottomCard taskAndActivities">
+            <div class="iconCircle">
+              <span class="fa fa-calendar"></span>
+            </div>
+            <div class="textSpace">
+              <p id='day'></p>
+              <h3>Tasks and Activities</h3>
+            </div>
+            <div class="iconCircle" style="background-color: #8a56ac00;">
+              <span class="fa fa-angle-right"></span>
+            </div>
+          </div>
+          <div class="row bottomCard downTask">
+            <div class="col-6 grow">
+              <h3>YOUR OVERALL GROWTH AVERAGE</h3>
+            </div>
+            <div class="col-6 avgCircle"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="convertsDevelopment pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Convert's Development</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="row courseCards convertStudyTab">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>Newly saved? Start here</p>
+            <div class="row">
+              <h6 class="col-10">Convert's Study Series</h6>
+              <h6 class="col-2 courseProgressText2"></h6>
+            </div>
+            <div class="courseProgressBar2"></div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+        <div class="row courseCards discipleProgTab">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>Walk in His steps starts Here</p>
+            <div class="row">
+              <h6 class="col-10">Discipleship Program</h6>
+              <h6 class="col-2 courseProgressText1"></h6>
+            </div>
+            <div class="courseProgressBar1"></div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+        <div class="row courseCards soulWinnerTab">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>It's time to launch out!</p>
+            <div class="row">
+              <h6 class="col-10">Soulwinner's Digest</h6>
+            </div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resources pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Resources</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="row courseCards studyGuideBtn">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>Bible reading plan for new converts</p>
+            <div class="row">
+              <h6 class="col-10">Bible Study Guide</h6>
+            </div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+        <div class="row courseCards bibleDoctrineBtn">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>Mastering bible doctrines</p>
+            <div class="row">
+              <h6 class="col-10">Bible Doctrines</h6>
+              <h6 class="col-2 courseProgressText5"></h6>
+            </div>
+            <div class="courseProgressBar5"></div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+        <div class="row courseCards breakingAddictionBtn">
+          <div class="col-2">
+            <span class="fa fa-certificate"></span>
+          </div>
+          <div class="col-8 courseDetail">
+            <p>Breaking addictive habits program</p>
+            <div class="row">
+              <h6 class="col-10">Breaking Addiction</h6>
+              <h6 class="col-2 courseProgressText8"></h6>
+            </div>
+            <div class="courseProgressBar8"></div>
+          </div>
+          <div class="col-2">
+            <span class="fa fa-angle-right"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="studyGuide pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToResources" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Bible Study Guide </h3>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="bibleGuide"> </div>
+      </div>
+    </div>
+    <div class="convertTasks pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Tasks and Activities</h3>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="activitiesList"></div>
+      </div>
+    </div>
+    <div class="tasksView pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3 id="taskCatName"></h3>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="tasksList"> </div>
+      </div>
+    </div>
+    <!-- Counselling Page -->
+    <div class="counselPage pages chooseCounselOption">
+      <div class="whiteHeader" style="background-color: #8a56ac00;">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: black">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+      </div>
+      <div class="pageArea chooseCounselOptionContent">
+        <div class="selected">
+          <h3>Counselling</h3>
+          <p>Choose area of concern</p>
+        </div>
+        <div class="counselOptionsCard row">
+          <div class="col-4 counselOptions" id="Career" style="padding: 7px; text-align: center">
+            <span class="fa fa-briefcase"></span>
+            <p class="counText">Career</p>
+          </div>
+          <div class="col-4 counselOptions" id="Spiritual" style="padding: 7px; text-align: center">
+            <span class="fa fa-cross"></span>
+            <p class="counText">Spiritual</p>
+          </div>
+          <div class="col-4 counselOptions" id="Academic" style="padding: 7px; text-align: center">
+            <span class="fa fa-book"></span>
+            <p class="counText">Academic</p>
+          </div>
+          <div class="col-4 counselOptions" id="Social" style="padding: 7px; text-align: center">
+            <span class="fa fa-users"></span>
+            <p class="counText">Social</p>
+          </div>
+          <div class="col-4 counselOptions" id="Psychological" style="padding: 7px; text-align: center">
+            <span class="fa fa-brain"></span>
+            <p class="counText">Psychological</p>
+          </div>
+          <div class="col-4 counselOptions" id="Family" style="padding: 7px; text-align: center">
+            <span class="fa fa-heart"></span>
+            <p class="counText">Family</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chooseCounselor pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToCounselPage" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3 id="counselSection"></h3>
+          <p>Who would you'd like to talk to?</p>
+        </div>
+      </div>
+      <div class="counsellorList"> </div>
+    </div>
+  </div>
+  <!-- Evangelist -->
+  <div class="soulWinnerView">
+    <div class="swvDashboard pages">
+      <div class="quickOptions">
+        <div class="dropDown row">
+          <div id="statusBar"></div>
+          <div class="col-4 profileBtn" style="padding: 7px; text-align: center">
+            <span class="fa fa-user dashMenus"></span>
+            <p class="collasP" style="font-weight: bold">PROFILE</p>
+          </div>
+          <div class="col-4 swMyConverts" style="padding: 7px; text-align: center">
+            <span class="fa fa-users dashMenus"></span>
+            <p class="collasP">MY CONVERTS</p>
+          </div>
+          <div class="col-4 chatsBtn" style="padding: 7px; text-align: center">
+            <span class="fa fa-comments dashMenus"></span>
+            <p class="collasP">CHATS</p>
+          </div>
+          <div class="drops row collapse">
+            <div class="col-4 notification" style="padding: 7px; text-align: center">
+              <span class="fa fa-bell dashMenus"></span>
+              <p class="collasP">NOTIFICATIONS</p>
+            </div>
+            <div class="col-4 navPlaceOW" style="padding: 7px; text-align: center">
+              <span class="fa fa-map-marker dashMenus"></span>
+              <p class="collasP">PLACE OF WORSHIP</p>
+            </div>
+            <div class="col-4 soulWinnerTab" style="padding: 7px; text-align: center">
+              <span class="fa fa-book dashMenus"></span>
+              <p class="collasP">SOULWINNER DIGEST</p>
+            </div>
+          </div>
+          <div class="col-12" style="text-align: center; padding: 1vh;">
+            <a href=".drops" data-bs-toggle="collapse" class="collapseBtn"><span class="fa fa-angle-down"></span></a>
+          </div>
+        </div>
+        <div class="dashImg">
+          <div class="welcome">
+            <p>Welcome</p>
+            <h1 class="profilePageName"></h1>
+          </div>
+        </div>
+        <div class="optionsCard">
+          <div class="cardOption swSummary" style="background-color: #8a56ac; margin-right: 4.5%; margin-left: 0px;">
+            <h3>All Converts</h3>
+            <h2 class='totalConverts'></h2>
+          </div>
+          <div class="cardOption swSummary" style="background-color: #d47fa6; margin-left: 4.5%; margin-right: 0px;">
+            <h3>Avg. Growth</h3>
+            <h2 class="averageConvertsGrowth"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="pageArea">
+        <h5>Top 3 Converts</h5>
+        <div class="topConverts">
+          <div class="topConvertsList d-flex gap-2 flex-column"> </div>
+          <div class="d-flex flex-column align-items-center mb-3">
+            <div class="btn swMyConverts styledBtn">See All</div>
+          </div>
+        </div>
+        <h5>Your Councelling Areas</h5>
+        <div class="counselAreasList">
+          <div class="counsellingArea">
+            <div class="noCounsellingArea">You have not selected any Counselling Area</div>
+            <div class="counselAreas" id="career"><span class="fa fa-briefcase"></span> Career</div>
+            <div class="counselAreas" id="spiritual"><span class="fa fa-cross"></span> Spiritual</div>
+            <div class="counselAreas" id="academic"><span class="fa fa-book"></span> Academic</div>
+            <div class="counselAreas" id="social"><span class="fa fa-users"></span> Social</div>
+            <div class="counselAreas" id="psychological"><span class="fa fa-brain"></span> Psychological</div>
+            <div class="counselAreas" id="family"><span class="fa fa-heart"></span> Family</div>
+          </div>
+          <input class="styledBtn setCounselAreas" type="button" value="Select Counselling Area" style="width: 100%;" />
+        </div>
+      </div>
+    </div>
+    <div class="chooseConvertScreen pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>My Converts</h3>
+          <p>Choose a convert to proceed</p>
+        </div>
+      </div>
+      <div class="listOfConverts"> </div>
+      <div class="row addConvRow">
+        <div class="addConvBtn">
+          <h1>+</h1>
+        </div>
+      </div>
+    </div>
+    <div class="selectConvertsOptions pages chooseConvertOption">
+      <div class="whiteHeader" style="background-color: #8a56ac00;">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: black">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+      </div>
+      <div class="pageArea chooseConvertOptionContent">
+        <div class="selected">
+          <p>Convert:</p>
+          <h3 class="selectedConvertsName"></h3>
+        </div>
+        <p>Choose action</p>
+        <div class="convertOptionCard row">
+          <div class="col-4 councOptions" id="Profile" style="padding: 7px; text-align: center">
+            <span class="fa fa-user"></span>
+            <p class="counText">View Profile</p>
+          </div>
+          <div class="col-4 councOptions" id="Analytic" style="padding: 7px; text-align: center">
+            <span class="fa fa-square-poll-vertical"></span>
+            <p class="counText">View Analytic</p>
+          </div>
+          <div class="col-4 councOptions" id="Chat" style="padding: 7px; text-align: center">
+            <span class="fa fa-comments"></span>
+            <p class="counText">Councel Convert</p>
+          </div>
+          <div class="col-4 councOptions" id="Share" style="padding: 7px; text-align: center">
+            <span class="fa fa-paper-plane"></span>
+            <p class="counText">Share</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="addConvert pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backFromAnalytics" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Add New Convert</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="pageArea">
+        <div class="imgText">
+          <h5>Kudos!</h5>
+          <p>Keep up the Lord's business</p>
+        </div>
+        <div class="formPow">
+          <h6>New Convert's details</h6>
+          <form action="" class="form" id="add_converts_form">
+            <p class="powErr" style="text-align: center; color: red;"></p>
+            <input type="text" id="addConvertName" placeholder="Name" />
+            <input type="email" id="addConvertEmail" placeholder="Email" />
+            <input type="text" id="addConvertPhone" placeholder="Phone Number" />
+            <select class="addConvertGender" style="color: white !important;">
+              <option value="">Choose Gender</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+            <input type="text" id="addConvertAddress" placeholder="Address" />
+          </form>
+          <input class="styledBtn addConvertBtn" type="button" value="Create Account" />
+        </div>
+      </div>
+    </div>
+    <div class="setCounselAreasPage pages">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="headText">
+          <h3>Counselling Areas</h3>
+          <p>In what areas will you like to counsel other?</p>
+        </div>
+      </div>
+      <div class="">
+        <div class="formPow" style="background: transparent;">
+          <h6>Select your Counselling Areas</h6>
+          <div class="form-check">
+            <input type="checkbox" value="career" class="areaSelect" id="forCareer">
+            <label class="areaSelect" for="forCareer">
+              <span class="fa fa-briefcase"></span> Career
+              <p>Talking about careers</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" value="spiritual" class="areaSelect" id="forSpiritual">
+            <label class="areaSelect" for="forSpiritual">
+              <span class="fa fa-cross"></span> Spiritual
+              <p>Talking about spiritual</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" value="academic" class="areaSelect" id="forAcademic">
+            <label class="areaSelect" for="forAcademic">
+              <span class="fa fa-book"></span> Academic
+              <p>Talking about academic</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" value="social" class="areaSelect" id="forSocial">
+            <label class="areaSelect" for="forSocial">
+              <span class="fa fa-users"></span> Social
+              <p>Talking about social</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" value="psychological" class="areaSelect" id="forPsychological">
+            <label class="areaSelect" for="forPsychological">
+              <span class="fa fa-brain"></span> Psychological
+              <p>Talking about psychological</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" value="family" class="areaSelect" id="forFamily">
+            <label class="areaSelect" for="forFamily">
+              <span class="fa fa-heart"></span> Family
+              <p>Talking about family</p>
+            </label>
+          </div>
+
+          <input class="styledBtn saveCouncelingAreas" type="button" value="Save" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Place of Worship -->
+  <div class="placeOfWorship pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToDashboard" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Place of Worship</h3>
+        <p>Request place of worship advisory below</p>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="imgText">
+        <h5>Fellowship</h5>
+        <p>A source of strength for believers</p>
+      </div>
+      <div class="previousResponse">
+        <h6>Your Previous Responses</h6>
+        <div class="replyList pt-2"></div>
+      </div>
+      <div class="formPow">
+        <h6>Fill the form to request advisory</h6>
+        <form action="" class="form">
+          <p class="powErr" style="text-align: center; color: red;"></p>
+          <input type="text" id="worshipCity" placeholder="City" />
+          <input type="text" id="worshipState" placeholder="State" />
+          <input type="text" id="worshipCountry" placeholder="Country" />
+          <input type="text" id="worshipNote" placeholder="Request Note" />
+        </form>
+        <input class="styledBtn sendPoWRequest" type="button" value="Send Request" />
+      </div>
+    </div>
+  </div>
+  <!-- Profile Page -->
+  <div class="profile pages">
+    <div class="profileHeader">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backToDashboard" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="profileHead">
+          <div class="profilePic">
+            <img class="profilePageImg" alt="Profile Image">
+          </div>
+          <h3 class="profilePageName"></h3>
+          <p> <span class="profilePageState"></span> <span class="profilePageCountry"></span></p>
+        </div>
+      </div>
+      <div class="profileFlex">
+        <div class="cOnly">
+          <p>GROWIH AVERAGE</p>
+          <h4 class="profilePageGrowthIndex"></h4>
+        </div>
+        <div class="cOnly">
+          <p>STATUS</p>
+          <h4 class="growthStatus"></h4>
+        </div>
+        <div class="swOnly">
+          <p>NO OF CONVERTS</p>
+          <h4 class="totalConverts"></h4>
+        </div>
+        <div class="swOnly">
+          <p>CONVERTS AVG. GROWTH</p>
+          <h4 class="averageConvertsGrowth"></h4>
+        </div>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="profileContact">
+        <div class="winnerDetails cOnly">
+          Your Evangelist
+          <h5 class='mentorName'></h5>
+          <h6 class='mentorId'></h6>
+          <h6 class='mentorPhone'></h6>
+        </div>
+        <h5 class="swOnly userId"></h5>
+        <p class="profilePageBio">Edit your profile to add a biography note</p>
+        <div class="contactEdit">
+          <ul>
+            <li><span class='profileLabel'>Phone: </span> <span class="profilePagePhone"></span></li>
+            <li><span class='profileLabel'>Email: </span> <span class="profilePageEmail"></span></li>
+            <li><span class='profileLabel'>Gender: </span> <span class="profilePageGender"></span></li>
+            <li><span class='profileLabel'>Address: </span> <span class="profilePageAddress"></span></li>
+            <li><span class='profileLabel'>State: </span> <span class="profilePageState"></span></li>
+            <li><span class='profileLabel'>Country: </span> <span class="profilePageCountry"></span></li>
+          </ul>
+          <div class="profileEdit">
+            <span class="fa fa-pencil"></span>
+          </div>
+        </div>
+        <button class="logout styledBtn" style="width: 100%;"><span class="fa fa-sign-out"></span>LOGOUT</button>
+      </div>
+    </div>
+  </div>
+  <!-- Edit Profile -->
+  <div class="editProfile pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToProfile" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Edit Profile</h3>
+        <p>Make changes to your profile below</p>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="profileHead">
+        <div class="profilePic d-flex flex-column align-items-center">
+          <img class="profilePageImg" alt="Profile Image">
+          <meter min="0" max="100" class="pt-2" id="uploadProgress" style="height: 3vh; width: 100%; display: none;"></meter>
+        </div>
+          <input class="styledBtn changeProImage" type="button" value="Change Picture">
+      </div>
+      <div class="formPow">
+        <h6>Fill the form to edit your Profile</h6>
+        <form action="" class="form">
+          <p class="profileErr" style="text-align: center; color: red;"></p>
+          <input type="text" placeholder="Name" class="profileEditName" />
+          <input type="text" placeholder="Email" class="profileEditEmail" />
+          <input type="text" placeholder="Phone Number" class="profileEditPhone" />
+          <select class="profileEditGender" style="color: white !important;">
+            <option value="">Choose Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+          </select>
+          <input type="text" placeholder="Address" class="profileEditAddress" />
+          <input type="text" placeholder="State" class="profileEditState" />
+          <select id="countries" class="profileEditCountry" style="color: white !important;">
+            <option value="">Select Country</option>
+          </select>
+          <!-- <input type="text" placeholder="Country" class="profileEditCountry" /> -->
+          <input type="text" placeholder="A note about yourself" class="profileEditBio" />
+          <input type="password" placeholder="New Password (If you wish to change it)" class="profileEditPassword" />
+        </form>
+      </div>
+      <input class="styledBtn profileSave" type="button" value="Continue" style="width: 100%;" />
+    </div>
+  </div>
+  <!-- Profile Page -->
+  <div class="convertProfileShow pages">
+    <div class="profileHeader">
+      <div class="whiteHeader">
+        <div id="statusBar"></div>
+        <h6 class="backFromAnalytics" style="color: gray">
+          <span class="fa-solid fa-angle-left"> </span>
+        </h6>
+        <div class="profileHead">
+          <div class="profilePic">
+            <img class="profilePageImg" alt="Profile Image">
+          </div>
+          <h3 class="convertsProfileName"></h3>
+          <p> <span class="convertsProfileState"></span> <span class="convertsProfileCountry"></span></p>
+        </div>
+      </div>
+      <div class="profileFlex">
+        <div >
+          <p>GROWING INDEX</p>
+          <h4 class="convertsProfileAverage"></h4>
+        </div>
+        <div >
+          <p>STATUS</p>
+          <h4 class="convertsGrowthStatus"></h4>
+        </div>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="profileContact">
+        <p class="convertsProfileBio">About details not provided</p>
+        <div class="contactEdit">
+          <ul>
+            <li><span class='profileLabel'>Phone: </span> <span class="convertsProfilePhone"></span></li>
+            <li><span class='profileLabel'>Email: </span> <span class="convertsProfileEmail"></span></li>
+            <li><span class='profileLabel'>Gender: </span> <span class="convertsProfileGender"></span></li>
+            <li><span class='profileLabel'>Address: </span> <span class="convertsProfileAddress"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Growth Analytics -->
+  <div class="growthAnalytics pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backFromAnalytics" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Growth Analytics</h3>
+        <div class="convertsDetail"> </div>
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="activities-tab" data-bs-toggle="pill" data-bs-target="#activities"
+              type="button" role="tab" aria-controls="activities" aria-selected="true"
+              style="color: #8a56ac;">Activites</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="studies-tab" data-bs-toggle="pill" data-bs-target="#studies" type="button"
+              role="tab" aria-controls="studies" aria-selected="false" style="color: #8a56ac;">Studies</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="tab-content">
+        <div id="activities" class="tab-pane fade show active" role="tabpanel">
+          <!-- Table -->
+          <div class="growthCard">
+            <div id="activitiesTable"> </div>
+          </div>
+          <!-- Chart -->
+          <!-- <div class="growthCard" style="margin: 10px">
+            <div class="col-12">
+              <div id="activityChart"></div>
+            </div>
+          </div> -->
+          <!-- Loader Viwer -->
+          <div class="row growthCard">
+            <div class="container-fluid">
+              <div class="progressBar" id='activitiesProgressBar'> </div>
+              <div class="row growthTb">
+                <div class="col-2">
+                  <span class="fa fa-circle" style="color: purple"></span>
+                </div>
+                <div class="col-7">
+                  <h5 style="text-align: left">Activities</h5>
+                </div>
+                <div class="col-3">
+                  <h5 class="activitiesAverage"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- studies -->
+        <div id="studies" class="tab-pane fade" role="tabpanel">
+          <div class="growthCard">
+            <div id="studiesTable"> </div>
+          </div>
+          <!-- Loader Viwer -->
+          <div class="row growthCard">
+            <div class="container-fluid">
+              <div class="progressBar" id='studiesProgressBar'> </div>
+              <div class="row growthTb">
+                <div class="col-2">
+                  <span class="fa fa-circle" style="color: purple"></span>
+                </div>
+                <div class="col-7">
+                  <h5 style="text-align: left">Studies</h5>
+                </div>
+                <div class="col-3">
+                  <h5 class="studiesAverage"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SoulWinner DigestSubs -->
+  <div class="soulWinnerDigestSubs pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backFromSoulWinnerDigest" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Evangelists Digest</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="row courseCards evangRoadTab">
+        <div class="col-2">
+          <span class="fa fa-certificate"></span>
+        </div>
+        <div class="col-8 courseDetail">
+          <p>Your roadmap to bringing anyone to Jesus</p>
+          <div class="row">
+            <h6 class="col-10">Evangelism Roadmap</h6>
+            <h6 class="col-2 courseProgressText3"></h6>
+          </div>
+          <div class="courseProgressBar3 swProgress"></div>
+        </div>
+        <div class="col-2">
+          <span class="fa fa-angle-right"></span>
+        </div>
+      </div>
+      <div class="row courseCards evangTechTab">
+        <div class="col-2">
+          <span class="fa fa-certificate"></span>
+        </div>
+        <div class="col-8 courseDetail">
+          <p>Package with evangelism techniques in the digital age</p>
+          <div class="row">
+            <h6 class="col-10">Evangelism Techniques</h6>
+            <h6 class="col-2 courseProgressText6"></h6>
+          </div>
+          <div class="courseProgressBar6 swProgress"></div>
+        </div>
+        <div class="col-2">
+          <span class="fa fa-angle-right"></span>
+        </div>
+      </div>
+      <div class="row courseCards soulWinnerInYouTab">
+        <div class="col-2">
+          <span class="fa fa-certificate"></span>
+        </div>
+        <div class="col-8 courseDetail">
+          <p>Your roadmap to effective soulwinning and discipleship</p>
+          <div class="row">
+            <h6 class="col-10">Evangelist in You</h6>
+            <h6 class="col-2 courseProgressText7"></h6>
+          </div>
+          <div class="courseProgressBar7 swProgress"></div>
+        </div>
+        <div class="col-2">
+          <span class="fa fa-angle-right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topics -->
+  <div class="topics pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backFromTopics" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3 class="stdytitle"></h3>
+        <p>Select an topic to continue</p>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="topicsRow"> </div>
+    </div>
+  </div>
+  <div class="studysPage pages">
+    <div class="whiteHeader coloredHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToTopics" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h6 class="studyDetail"></h6>
+        <h5 class="studyTopic"></h5>
+        <!-- <p>Select an topic to continue</p> -->
+      </div>
+    </div>
+    <div class="studyImg"></div>
+    <div class="pageArea">
+      <div class="studyDetails">
+        <h3> <span class="fa fa-book-bible"></span> Text </h3>
+        <p class="studyText"></p>
+        <h3> <span class="fa-brands fa-leanpub"></span> Study </h3>
+        <div class="studyContent"></div>
+        <h3> <span class="fa fa-shield-heart"></span> Ponder </h3>
+        <p class="studyPonder"> </p>
+      </div>
+      <div class="stage"></div>
+    </div>
+  </div>
+  <div class="quiz pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToDashboard" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <p class="topicName"></p>
+        <h3>Quiz</h3>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="quizCard">
+        <p id="quizNote"></p>
+      </div>
+      <div class="quizCard">
+        <h5 id="quizNo"></h5>
+        <h5> Questions </h5>
+      </div>
+      <button class="styledBtn quizStartBtn" style="width: 100%; margin-top: -2vh;">
+        <span class="fa fa-play" style="padding: 10px"></span> START
+      </button>
+    </div>
+  </div>
+  <div class="quizQue pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToTopics" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <p class="topicName"></p>
+        <p id='theQuestionNumb'></p>
+        <h3>Quiz</h3>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="quizCard">
+        <p id='theQuestion'></p>
+      </div>
+      <div class="options">
+        <div class="radio">
+          <label><input type="radio" name="optradio" class="quizOpt" value="a" /> <span id="optionA"></span> </label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio" class="quizOpt" value="b" /> <span id="optionB"></span> </label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio" class="quizOpt" value="c" /> <span id="optionC"></span> </label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio" class="quizOpt" value="d" /> <span id="optionD"></span> </label>
+        </div>
+      </div>
+      <div class="quizStage"></div>
+    </div>
+  </div>
+  <!-- Notification -->
+  <div class="notificationPage pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToDashboard" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Notifications</h3>
+      </div>
+    </div>
+    <div class="pageArea">
+      <div class="notificationsList"> </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modalScore" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modalpage">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="padding: 0px">
+                <h3>Score</h3>
+              </div>
+              <div class="col-12">
+                <div class="modalCircle">
+                  <p id='scoredPercent'></p>
+                  <div class="scoreHold">
+                    <h3 id='scored'></h3>
+                    <p id='scoreTotal'></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="modalButton scoreClose">
+                  <h3>CLOSE</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modalRegSucc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modalpage">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="padding: 0px">
+                <h3>Registration Successful</h3>
+              </div>
+              <div class="col-12">
+                <div class="modalCircle">
+                  <div class="modalSmallCircle">
+                    <span class="fa fa-check fa-5x" style="color: white"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="modalButton closeRegModal">
+                  <h3>OK</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Did you -->
+  <div id="modalDidYou" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modalpage">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="padding: 10px">
+                <h3 id='taskQuestion'></h3>
+              </div>
+              <div class="col-12">
+                <div class="modalButton taskYes">
+                  <h3>YES</h3>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="modalButton taskNo" style="background-color: gray">
+                  <h3>NO</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Confirmations Modal -->
+  <div id="modalConfirmation" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modalpage">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="padding: 0px">
+                <h3 id='modalMessage'></h3>
+              </div>
+              <div class="col-12">
+                <div class="modalCircle">
+                  <div class="modalSmallCircle">
+                    <span class="fa fa-check fa-5x" style="color: white"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="modalButton closeConfirmationModal">
+                  <h3>OK</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chats Page -->
+  <div class="chats pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToDashboard" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3>Chats</h3>
+        <p>Continue a conversation</p>
+      </div>
+    </div>
+    <div class="chattingWiths">
+      <!--<p>I hope you understand the point I'm explaining</p>
+          <div class="pickUserBadge"> <p>1</p> </div> -->
+    </div>
+  </div>
+  <div class="chatting pages">
+    <div class="whiteHeader">
+      <div id="statusBar"></div>
+      <h6 class="backToChats" style="color: gray">
+        <span class="fa-solid fa-angle-left"> </span>
+      </h6>
+      <div class="headText">
+        <h3 class="chatWithName"></h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="chat"></div>
+    <div class="chatInput">
+      <textarea class="newMessage" placeholder="Say Something..."></textarea>
+      <div class="sendBtn">
+        <span class="fa-solid fa-paper-plane"></span>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
