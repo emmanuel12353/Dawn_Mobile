@@ -1,0 +1,873 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+.row{
+  --bs-gutter-x: 0;
+}
+ol, ul {
+  padding-left: 0rem;
+}
+.fa-solid{
+  font-weight: bold !important;
+  font-size: large;
+}
+input:-internal-autofill-selected {
+  appearance: unset;
+  background-image: none !important;
+  background-color: unset !important;
+  color: unset !important;
+}
+#statusBar {
+  padding: 2vh;
+}
+.welcome1 {
+  position: absolute;
+  width: 90%;
+  top: 50vh;
+  background-color: #352641;
+  border-radius: 5px 0px 0px 80px;
+  right: 0px;
+  padding: 10px 35px;
+  color: white;
+}
+.welcomeText h5 {
+  font-size: 14px;
+}
+.welcomeText h2 {
+  font-size: 35px;
+  margin-top: 15px;
+}
+.getStartedBtn h5 {
+  text-align: center;
+  font-size: 16px;
+}
+.getStartedBtn {
+  position: relative;
+  width: 70%;
+  padding: 15px 10%;
+  bottom: -30px;
+  background-color: #d47fa6;
+  border-radius: 50px 0px 0px 50px;
+  left: calc(30% + 35px);
+}
+/* Continue Page */
+.continueImg {
+  background-image: url(../img/assets/continueBg.png);
+  background-size: cover;
+  height: 60vh;
+  border-radius: 0px 0px 0px 70px;
+}
+.continueToDashBoard {
+  background-color: #241332;
+  height: 10vh;
+  border-radius: 70px 0px 0px 70px;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.continueToDashBoard h3 {
+  font-size: 17px;
+}
+.continueText h3 {
+  color: black;
+  font-weight: bolder;
+}
+.continueText p {
+  color: gray;
+  font-weight: lighter;
+}
+.continueText{
+  text-align: center;
+  padding: 3vh;
+}
+.signUpInPage{
+  background-color: #CCCCCC;
+}
+.signUpInPageBG {
+  height: 45vh;
+  background-color: #8a56ac;
+  border-radius: 0px 0px 0px 100px;
+  text-align: center;
+}
+.formPanel {
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  padding-top: 20vh;
+  justify-content: center;
+  width: 100vw !important;
+}
+.formPanel ul, .nav-pills .nav-link {
+  font-weight: 900;
+  color: #fff;
+  background-color: #8a56ac00 !important;
+  width: 100%;
+  justify-content: center;
+  font-size: 16px;
+}
+.nav-pills .nav-link.active {
+  border: solid 5px #8a56ac70 !important;
+  border-width: 0px 0px 5px 0px !important;
+}
+.signUpForm, .loginForm {
+  height: auto;
+  width: 80%;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 40px 0px;
+  margin: 10%;
+}
+.signUpForm .form input, .loginForm .form input, .form select {
+  color: #241332 !important;
+}
+.form input[type="email"], input[type="text"], input[type="password"], select
+{
+  width: 80%;
+  padding: 5px;
+  margin: 15px 0;
+  border: none;
+  border-bottom: 1px solid #8a56ac;
+  font-size: 16px;
+  background-color: #FFFFFF00;
+}
+.styledBtn {
+  width: 80%;
+  background-color: #8a56ac;
+  color: white;
+  padding: 10px;
+  margin: 2vh 0;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.quickOptions {
+  background-color: #352641;
+  border-radius: 0px 0px 0px 70px;
+  padding-bottom: 1vh;
+}
+.dashImg {
+  color: white;
+  border-radius: 0px 0px 0px 70px;
+  background-image: url(../img/assets/dashboardImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 1vh;
+  padding-top: 20vh;
+}
+.dropDown {
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  border-radius: 0px 0px 0px 70px;
+  color: grey;
+  font-size: 10px;
+  padding: 0vh 3vw;
+}
+.dashMenus {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  color: gray;
+  padding-top: 16px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 15px;
+}
+.welcome{
+  margin: 6vh 5vw;
+}
+.welcome h1 {
+  font-weight: bolder;
+}
+.optionsCard {
+  overflow: auto;
+  white-space: nowrap;
+  margin: 2vh 5vw;
+  padding: 3vh 0vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.optionsCard::-webkit-scrollbar {
+  display: none;
+}
+.cardOption {
+  color: white;
+  width: 50%;
+  padding: 25px;
+  margin-right: 20px;
+  background-color: #998FA2;
+  display: inline-block;
+  height: auto;
+  border-radius: 10px 40px 10px 40px;
+}
+.swSummary{
+  width: 45%;
+}
+.cardOption h3 {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-top: 5px !important;
+  white-space: initial;
+}
+.cardOption h2, .profileFlex h4 {
+  font-weight: bolder;
+  margin-top: 5px !important;
+  text-align: center;
+  font-size: 22px;
+}
+.swSummary h2{
+  font-size: 30px;
+  margin-top: 10px !important;
+}
+p {
+  font-weight: lighter;
+  margin: 0px !important;
+}
+.collapseBtn{
+  font-weight: 900;
+  font-size: medium;
+  padding: 1.5vh 5vh;
+  color: grey !important;
+}
+.bottomCard {
+  border-radius: 70px;
+  padding: 15px;
+  background-color: #352641;
+  margin-bottom: 1vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.iconCircle {
+  border-radius: 50%;
+  min-width: 50px;
+  min-height: 50px;
+  background-color: #8a56ac;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 2vw;
+}
+.textSpace {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.bottomCard h3 {
+  font-size: 16px;
+}
+.textSpace p {
+  font-size: 10px;
+}
+.downTask {
+  padding: 25px 45px;
+  margin-top: 30px;
+}
+.grow h3 {
+  margin-right: 25px;
+}
+.placeOfWorship, .profile, .editProfile, .growthAnalytics, .soulWinnerDigestSubs,
+.topics, .studysPage, .quiz, .quizQue, .convertsDevelopment, .resources,
+.studyGuide, .convertTasks, .tasksView, .notificationPage, .chooseConvertScreen,
+.addConvert, .chats, .chooseCounselor, .chatting, .setCounselAreasPage, .convertProfileShow {
+  background-color: #241332;
+  /* position: absolute; */
+}
+.whiteHeader{
+  background-color: white;
+  border-radius: 0px 0px 0px 70px;
+  font-size: 10px;
+  padding: 0vh 0vw 5vh 5vw;
+  /* width: 100%;
+  position: -webkit-sticky;
+  position: sticky; */
+}
+.headText{
+  margin: 2vh 6vw;
+}
+.headText h3{
+  margin-bottom: 10px !important;
+}
+.headText p{
+  color: grey;
+}
+.pageArea {
+  padding: 5vh 5vw;
+}
+.formPow {
+  padding: 5vh 0;
+  background-color: #352641;
+  border-radius: 30px ;
+  text-align: center;
+  color: white !important;
+}
+.imgText{
+  border-radius: 30px;
+  background-image: url(../img/assets/dashboardImg.png);
+  background-repeat: no-repeat;
+  padding: 5%;
+  padding-top: 10vh;
+  margin-bottom: 5vh;
+  font-size: large;
+  color: white;
+  font-weight: 800;
+}
+.previousResponse{
+  background-color: #352641;
+  margin-bottom: 5vh;
+  color: white;
+  border-radius: 30px;
+  padding: 10%;
+}
+.profileHeader {
+  background-color: #8a56ac;
+  border-radius: 0px 0px 0px 70px;
+  font-size: 10px;
+}
+.profileFlex {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3vh 3vw;
+  text-align: center;
+  color: white;
+}
+.winnerDetails, .convertsDetail {
+  color: white;
+  background-color: #d47fa6;
+  border-radius: 30px;
+  padding: 3vh;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+.profilePic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+.profileHead {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+.profileHead h3 {
+  margin-bottom: 3px;
+  margin-top: 15px;
+}
+.text-right {
+  text-align: right;
+}
+.contactEdit {
+  display: flex;
+  justify-content: space-between;
+}
+.profileEdit {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  padding: 13px;
+  font-size: 18px;
+  margin: 0px 10px;
+  color: #241332;
+}
+.profileContact{
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.profileContact ul li {
+  list-style: none;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.profileContact ul li .profileLabel{
+  min-width: 80px !important;
+  display: inline-block;
+}
+.profilePageBio{
+  padding: 2vh 0vw;
+}
+.growthCard {
+  margin-top: 5vh;
+  background-color: white;
+  border-radius: 40px;
+  text-align: center;
+  padding: 3vh 5vw;
+}
+.growthT {
+  margin: 20px 5px;
+}
+.growthTb {
+  padding: 5px 0px;
+  margin: 10px 0px;
+}
+.growthT h5, .growthTb h5 {
+  color: rgb(58, 57, 57);
+  font-size: 1.0rem;
+}
+.courseCards {
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 1.5vh 2vw;
+  background-color: #352641;
+  width: 100%;
+  color: white;
+  margin-bottom: 3vh;
+}
+.courseCards .col-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.courseCards .col-2 span{
+  background-color: #8a56ac;
+  padding: 15px;
+  border-radius: 50%;
+}
+.courseDetail h6{
+  margin-bottom: 1vh;
+  font-weight: 300;
+  font-size: 14px;
+}
+.courseDetail p{
+  margin-bottom: 1vh !important;
+  font-weight: 300;
+  font-size: 12px;
+  color: grey;
+}
+.courseDetail{
+  padding: 1vh 4vw;
+}
+.coloredHeader{
+  background-color: #24133200;
+  border: solid grey;
+  border-width: 0px 0px 2px 0px;
+  color: white;
+}
+.studyImg {
+  padding: 0px;
+  margin: 3vh 0px;
+  background-size: cover;
+  height: 25vh;
+}
+.studyDetails {
+  color: white;
+  text-align: justify;
+}
+.studyDetails h3{
+  color: grey;
+  font-size: 16px;
+  padding: 1vh 0px;
+}
+.studyDetails h3 span{
+  color: white;
+  font-size: 30px;
+  width: 40px;
+  text-align: left;
+}
+.quizCard {
+  background-color: #352641;
+  border-radius: 50px;
+  padding: 5vh;
+  margin-bottom: 5vh;
+  height: auto;
+  text-align: center;
+  color: white;
+}
+#quizNote, #theQuestion{
+  margin: 25px;
+  font-size: 1.1rem;
+}
+#quizNo {
+  font-weight: bolder;
+  font-size: 5em !important;
+}
+.quizCard p {
+  font-size: 12px;
+}
+.taskCard {
+  background-color: #352641;
+  border-radius: 50px;
+  margin: 20px 0px;
+  padding: 15px;
+  color: white;
+}
+.taskCard .col-2, .taskCard .col-9, .taskCard .col-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.taskCard .col-2 {
+  align-items: center;
+}
+.takeQuizBtn, .takeQuizBtnQuiz {
+  background-color: #8a56ac;
+  border-radius: 50px;
+  width: 80%;
+  margin: auto;
+}
+.takeQuizBtn p, .takeQuizBtnQuiz p {
+  color: #EEEEEE;
+  font-size: 16px;
+  margin: 0px;
+}
+.prevBtn {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #352641;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  color: white;
+}
+.options {
+  padding: 0px 5vw;
+}
+.options label {
+  padding: 1vh;
+  margin: 1vh 0px;
+  font-size: 1.2rem;
+  color: white;
+  width: 100%;
+  background-color: #352641;
+  border-radius: 10px;
+}
+.months{
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+/*  */
+.vCenter {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.vCentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.addConvRow, .chatInput{
+  position: sticky;
+  width: 100vw;
+  display: flex;
+  bottom: 0px;
+  background-color: #241332;
+  justify-content: space-between;
+  padding: 2vh;
+}
+.addConvBtn {
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: #352641;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addConvBtn h1 {
+  font-size: 44px;
+  color: white;
+}
+.listOfConverts, .chat{
+  padding-bottom: 50px;
+  height: 90%;
+}
+.chooseConvertOption, .chooseCounselOption {
+  background-image: url(../img/assets/continueBg.png);
+  background-size: cover;
+  font-weight: lighter;
+}
+.chooseConvertOptionContent, .chooseCounselOptionContent {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 65vh;
+  background-color: #ccc;
+  border-radius: 0px 70px 0px 0px;
+}
+.convertOptionCard, .counselOptionsCard {
+  background-color: #EEEEEE;
+  height: auto;
+  margin: 20px 5px;
+  border-radius: 20px;
+  padding: 3vh 2vw;
+}
+.convertOptionCard p, .counselOptionsCard p {
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 1vh 0px;
+}
+.selected{
+  padding: 2vh 0px;
+}
+.pickUserCard {
+  padding: 2vh 10vw;
+  border-bottom: 1px solid gray;
+  border-radius: 0px 0px 0px 50px;
+  color: white;
+  display: flex;
+}
+.pickUserImg {
+  min-width: 25%;
+  border-radius: 50%;
+}
+.pickUserImg img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+}
+.pickUserText{
+  min-width: 70%;
+  color: white;
+}
+.pickUserText h4 {
+  font-size: 16px;
+}
+.pickUserText p {
+  padding-top: 0.7vh;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.pickUserBadge, .pickUserText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pickUserBadge p{
+  padding: 15px;
+}
+.chat{
+  color: white;
+  overflow: scroll;
+}
+.messageSent{
+  display: flex;
+  justify-content: end;  
+}
+.messageRecieved{
+  display: flex;
+  justify-content: start;  
+}
+.messageSent .message {
+  border-radius: 50px 0px 0px 50px;
+  background-color: grey;
+  text-align: right;
+}
+.messageRecieved .message {
+  border-radius: 0px 50px 50px 0px;
+  background-color: #8a56ac;
+  text-align: left;
+}
+.message {
+  padding: 1.2vh 5vw;
+  max-width: 75%;
+  font-size: 12px;
+  margin: 1vh 0vw;
+}
+.newMessage{
+  background-color: #FFFFFF00;
+  border: 0px;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 0px 1vh;
+  color: white !important;
+}
+.sendBtn{
+  background-color: #8a56ac;
+  padding: 2vh;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Modals */
+.modalCircle p{
+  font-size: 1.8rem;
+}
+.modalButton {
+  width: 100%;
+  height: auto;
+  background-color: #8a56ac;
+  border-radius: 30px;
+  text-align: center;
+  margin: 10px 0px;
+}
+.modalButton h3 {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+.modalpage {
+  background-color: #241332;
+  border-radius: 0px 60px;
+  top: 150px;
+  padding: 5px 0px;
+  width: 80%;
+  margin: auto;
+}
+.modalpage h3 {
+  color: #EEEEEE;
+  font-size: 25px;
+  margin: 0px;
+  padding: 5px;
+}
+.modalpage h4 {
+  color: gray;
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.modalpage p {
+  color: #EEEEEE;
+  font-size: 12px;
+  margin: 0px;
+  padding: 5px;
+}
+.modalCircle {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  margin: 3vh auto;
+  text-align: center;
+  border: 5vw solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scoreHold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scoredPercent {
+  font-size: 2.5rem;
+}
+
+.noCounsellingArea, .counselAreas{
+  text-align: center;
+  color: white;
+  font-size: larger;
+  padding: 3vh 5vw;
+  border-radius: 30px;
+  background-color: #241332;
+  display: none;
+}
+
+.noChats{
+  text-align: center;
+  color: white;
+  font-size: larger;
+  padding: 5vh 5vw;
+  border-radius: 30px;
+  background-color: #352641;
+  margin: 5vh 5vw;
+}
+
+.counselAreasList{
+  padding: 3vh;
+}
+
+.counselAreas{
+  text-align: left;
+  margin-bottom: 1vh;
+  padding: 2vh 10vw;
+  display: none;
+}
+.counselAreas span, .areaSelect span{
+  padding-right: 3vw;
+}
+.form-check {
+  display: flex;
+  margin: 5%;
+  padding: 2vh 5vw;
+  border-radius: 10px;
+  background-color: #352641;
+}
+.replyList .form-check{
+  background-color: #1b082b;
+  margin: 1%;
+  margin-bottom: 5%;
+}
+
+.areaSelect{
+  text-align: left;
+  margin-left: 5%;
+}
+
+.selectedConvertsName, #counselorName, .convertsDetailText h4{
+  text-transform: capitalize;
+}
+
+.convertsDetailText p{
+  color: white;
+}
+
+.convertsDetailImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-right: 20px;
+}
+
+.convertsDetail{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.day{
+  font-size: small;
+  margin-bottom: 1vh !important;
+}
+
+.itsToday{
+  background-color: #d47fa6;
+}
+
+.scored span{
+  background-color: #d47fa6;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.topConverts{
+  background-color: #998FA2;
+  color: white;
+  border-radius: 20px;
+  padding: 5%;
+  padding-bottom: 0px;
+  margin-top: 2vh;
+}
+
+.topConvert{
+  border-radius: 20px;
+  background-color: #241332;
+  padding: 5%;
+}

@@ -1,0 +1,78 @@
+#loader-in {
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+#loader-in::before , #loader-in::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #8a56ac;
+  animation: prixClipFix 2s linear infinite ;
+}
+#loader-in::after{
+  transform: rotate3d(90, 90, 0, 180deg );
+  border-color:#352641;
+}
+
+@keyframes rotate {
+  0%   {transform: rotate(0deg)}
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+} 
+
+.loader {
+  background-color: #30303050;
+  position: absolute;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#pie {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#pie::before {
+  color: #8a56ac;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressBar, .courseProgressBar1, .courseProgressBar2, .courseProgressBar3,
+.courseProgressBar4, .courseProgressBar5, .courseProgressBar6, .courseProgressBar7, .courseProgressBar8 {
+  width: 100%;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #EEEEEE;
+}
+
+#bar {
+  height: 100%;
+  border-radius: 15px;
+  background-color: #8a56ac;
+}
